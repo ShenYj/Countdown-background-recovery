@@ -1,0 +1,44 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '14.5'
+inhibit_all_warnings!
+install! 'cocoapods',
+  :warn_for_unused_master_specs_repo => false
+
+def libs_rx_swift
+  # Core & Derived library
+  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git', :tag => '6.2.0'
+  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :tag => '6.2.0'
+  pod 'RxGesture', :git => 'https://github.com/RxSwiftCommunity/RxGesture.git', :tag => '4.0.2'
+  pod 'RxSwiftExt', :git => 'https://github.com/RxSwiftCommunity/RxSwiftExt.git', :tag => '6.0.1'
+  pod 'RxDataSources', :git => 'https://github.com/RxSwiftCommunity/RxDataSources.git', :tag => '5.0.0'
+  pod 'RxAnimated', :git => 'https://github.com/RxSwiftCommunity/RxAnimated.git', :tag => '0.9.0'
+  pod 'RxAlertViewable', :git => 'https://github.com/lm2343635/RxAlertViewable.git', :tag => '1.1'
+  pod 'RxUIAlert', :git => 'https://github.com/RxSwiftCommunity/RxAlert.git', :tag => '1.4.1'
+  pod 'RxKeyboard', :git => 'https://github.com/RxSwiftCommunity/RxKeyboard', :tag => '2.0.0'
+  pod 'RxOptional', :git => 'https://github.com/RxSwiftCommunity/RxOptional.git', :tag => 'v5.0.3'
+  pod 'RxFlow', :git => 'https://github.com/RxSwiftCommunity/RxFlow.git', :tag => '2.12.2'
+  pod 'RxBinding', :git => 'https://github.com/RxSwiftCommunity/RxBinding.git', :tag => '0.5'
+  pod 'NSObject+Rx', :git => 'https://github.com/RxSwiftCommunity/NSObject-Rx.git', :tag => '5.2.2'
+  pod 'RxViewController', :git => 'https://github.com/devxoul/RxViewController.git', :tag => '2.0.0'
+  pod 'RxAppState'#, :git => 'https://github.com/pixeldock/RxAppState.git'
+end
+
+def libs_tools_pods
+  pod 'SwiftDate', '~> 6.3.1'
+  pod 'SwiftyJSON', '~> 5.0.1'
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'SwifterSwift', '~> 5.2.0'
+  pod 'Hue', '~> 5.0.0'
+  pod 'Then', '~> 2.7.0'
+end
+
+target 'RxTimerWithBackgroundRecovery' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RxTimerWithBackgroundRecovery
+  libs_rx_swift
+  libs_tools_pods
+end
