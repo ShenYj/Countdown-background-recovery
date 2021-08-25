@@ -27,7 +27,6 @@
 import UIKit
 import SnapKit
 import Then
-import SwifterSwift
 import RxSwift
 import RxCocoa
 import NSObject_Rx
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
         .then{
             $0.textAlignment = .center
             $0.font = UIFont.systemFont(ofSize: 15)
-            $0.textColor = .random
+            $0.textColor = .green
             $0.text = ""
         }
     
@@ -61,7 +60,6 @@ class ViewController: UIViewController {
         setupUI()
         bindViewModel()
     }
-
 }
 
 extension ViewController {

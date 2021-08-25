@@ -26,7 +26,6 @@
 
 import Foundation
 import SwiftDate
-import SwifterSwift
 import RxSwift
 import RxCocoa
 import NSObject_Rx
@@ -61,9 +60,9 @@ public extension ViewModel {
         let messageTextDriver: Driver<String> = messageSubject.map{ $0.1 }.asDriver(onErrorJustReturn: "")
         let messageTextColorDriver: Driver<UIColor> = messageSubject.map{
             switch $0.0 {
-            case .error: return UIColor.red
-            case .success: return UIColor.green
-            case .warning: return UIColor.orange
+            case .error:    return UIColor.red
+            case .success:  return UIColor.green
+            case .warning:  return UIColor.orange
             }
         }
         .asDriver(onErrorJustReturn: UIColor.orange)
@@ -80,15 +79,13 @@ public extension ViewModel {
                 let clientMsg = $0 ? "短信发送成功" : "短信发送失败"
                 messageSubject.onNext(($0 ? .success : .error, clientMsg))
             })
-            .map{ $0 }
+            .map{ $0 } // 这里用来做一些前置任务, 满足的情况下继续
             .filter{ $0 }
             .flatMapLatest({ _ in
                 Observable<Int>.interval(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
                     .scan(COUNTDOWN_SECONDS, accumulator: { [weak self] (acc, current) in
-                        print("倒计时: acc: \(acc) current: \(current) offset: \(self?.offsetSecond ?? 0)")
-                        guard let offset = self?.offsetSecond, offset > 0 else {
-                            return acc - 1
-                        }
+                        print("Timer -> acc: \(acc) current: \(current) offset: \(self?.offsetSecond ?? 0)")
+                        guard let offset = self?.offsetSecond, offset > 0 else { return acc - 1 }
                         let inBackground = offset
                         self?.offsetSecond = 0
                         guard offset < 60 else { return acc - acc }
