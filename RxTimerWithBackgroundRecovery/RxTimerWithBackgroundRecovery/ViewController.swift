@@ -107,6 +107,7 @@ extension ViewController {
             $0.top.equalTo(messageLabel.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
             
+            /// TODO: waiting for swift 5.6 new attributes: #unavailable(iOS 15.0)
             if #available(iOS 15.0, *) {
                 
             }
