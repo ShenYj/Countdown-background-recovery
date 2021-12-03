@@ -31,12 +31,17 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 
-
 class ViewController: UIViewController {
     
     let viewModel = ViewModel()
     
-    lazy var messageLabel = UILabel()
+    private lazy var imageView = UIImageView()
+        .then{
+            $0.contentMode = .scaleAspectFit
+            $0.image = UIImage(named: "ios_button_new_feature.JPG")
+        }
+    
+    private lazy var messageLabel = UILabel()
         .then{
             $0.textAlignment = .center
             $0.font = UIFont.systemFont(ofSize: 15)
@@ -44,19 +49,12 @@ class ViewController: UIViewController {
             $0.text = ""
         }
     
-    lazy var smsButton = UIButton()
-        .then{
-            $0.setTitle("获取验证码", for: .normal)
-            $0.setTitleColor(.white, for: .normal)
-            $0.setTitleColor(UIColor.blue, for: .normal)
-            $0.setTitleColor(UIColor.gray, for: .highlighted)
-            $0.setTitleColor(UIColor.gray, for: .disabled)
-        }
+    
+    private lazy var smsButton = SMSButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         setupUI()
         bindViewModel()
     }
@@ -71,7 +69,16 @@ extension ViewController {
         let input = ViewModel.Input(smsTrigger: smsTrigger)
         let output = viewModel.transform(input: input)
         
+        if #available(iOS 15.0, *) {
+            output.getCodeTextDriver.drive(smsButton.rx.configurationTitle).disposed(by: rx.disposeBag)
+            output.getCodeSubTextDriver.drive(smsButton.rx.configurationSubTitle).disposed(by: rx.disposeBag)
+        }
+        else {
+            output.getCodeTextDriver.drive(smsButton.rx.title()).disposed(by: rx.disposeBag)
+            output.getCodeBGColorDriver.drive(smsButton.rx.backgroundColor).disposed(by: rx.disposeBag)
+        }
         output.getCodeTextDriver.drive(smsButton.rx.title()).disposed(by: rx.disposeBag)
+        output.getCodeBGColorDriver.drive(smsButton.rx.backgroundColor).disposed(by: rx.disposeBag)
         output.getCodeEnabledDriver.drive(smsButton.rx.isEnabled).disposed(by: rx.disposeBag)
         output.messageTextDriver.drive(messageLabel.rx.text).disposed(by: rx.disposeBag)
         output.messageTextColorDriver.drive(messageLabel.rx.textColor).disposed(by: rx.disposeBag)
@@ -83,8 +90,14 @@ extension ViewController {
     
     fileprivate func setupUI() {
         
+        view.addSubview(imageView)
         view.addSubview(messageLabel)
         view.addSubview(smsButton)
+        
+        imageView.snp.makeConstraints {
+            $0.left.top.right.equalToSuperview()
+            $0.bottom.equalTo(messageLabel.snp.top).offset(-10)
+        }
         
         messageLabel.snp.makeConstraints {
             $0.left.centerY.right.equalToSuperview()
@@ -92,8 +105,14 @@ extension ViewController {
         }
         smsButton.snp.makeConstraints {
             $0.top.equalTo(messageLabel.snp.bottom).offset(40)
-            $0.size.equalTo(CGSize(width: 120, height: 44))
             $0.centerX.equalToSuperview()
+            
+            if #available(iOS 15.0, *) {
+                
+            }
+            else {
+                $0.size.equalTo(CGSize(width: 120, height: 44))
+            }
         }
     }
 }

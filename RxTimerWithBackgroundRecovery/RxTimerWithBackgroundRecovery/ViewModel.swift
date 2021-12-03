@@ -70,7 +70,9 @@ public extension ViewModel {
         /// 短信验证码按钮
         let getCodeTextSubject: PublishSubject<String> = PublishSubject()
         let getCodeTextDriver: Driver<String> = getCodeTextSubject.asDriver(onErrorJustReturn: "")
+        let getCodeSubTextDriver: Driver<String> = getCodeTextDriver.map{ $0 == "获取验证码" ? "" : "请稍后" }
         let getCodeEnabledDriver: Driver<Bool> = getCodeTextDriver.map{ $0 == "获取验证码" }
+        let getCodeBGColorDriver: Driver<UIColor> = getCodeTextDriver.map{ $0 == "获取验证码" ? UIColor.orange : UIColor.lightGray }
         
         let timer: Observable<Int> = input.smsTrigger
             .asObservable()
@@ -132,7 +134,9 @@ public extension ViewModel {
         
         return Output(
             getCodeTextDriver: getCodeTextDriver,
+            getCodeSubTextDriver: getCodeSubTextDriver,
             getCodeEnabledDriver: getCodeEnabledDriver,
+            getCodeBGColorDriver: getCodeBGColorDriver,
             messageTextDriver: messageTextDriver,
             messageTextColorDriver: messageTextColorDriver
         )
@@ -146,7 +150,9 @@ public extension ViewModel {
     }
     struct Output {
         let getCodeTextDriver: Driver<String>
+        let getCodeSubTextDriver: Driver<String>
         let getCodeEnabledDriver: Driver<Bool>
+        let getCodeBGColorDriver: Driver<UIColor>
         let messageTextDriver: Driver<String>
         let messageTextColorDriver: Driver<UIColor>
     }

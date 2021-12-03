@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EA3C83B6D61DF71691EF0A72 /* Pods_RxTimerWithBackgroundRecovery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EF3A45FB7E6EF95BA054BC /* Pods_RxTimerWithBackgroundRecovery.framework */; };
+		F7347DD5275A193D004C67BF /* ios_button_new_feature.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F7347DD4275A193D004C67BF /* ios_button_new_feature.JPG */; };
+		F7347DD7275A1A21004C67BF /* UIButton+RxConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7347DD6275A1A21004C67BF /* UIButton+RxConfiguration.swift */; };
+		F7347DD9275A4E63004C67BF /* SMSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7347DD8275A4E63004C67BF /* SMSButton.swift */; };
 		F7BE6A1826D543B9002339CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE6A1726D543B9002339CE /* AppDelegate.swift */; };
 		F7BE6A1A26D543B9002339CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE6A1926D543B9002339CE /* SceneDelegate.swift */; };
 		F7BE6A1C26D543B9002339CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE6A1B26D543B9002339CE /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 		35C3B5F15D6AA9EBDEA36B01 /* Pods-RxTimerWithBackgroundRecovery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimerWithBackgroundRecovery.release.xcconfig"; path = "Target Support Files/Pods-RxTimerWithBackgroundRecovery/Pods-RxTimerWithBackgroundRecovery.release.xcconfig"; sourceTree = "<group>"; };
 		A1EF3A45FB7E6EF95BA054BC /* Pods_RxTimerWithBackgroundRecovery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTimerWithBackgroundRecovery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C0343F88C5A6F65BF1A52A /* Pods-RxTimerWithBackgroundRecovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimerWithBackgroundRecovery.debug.xcconfig"; path = "Target Support Files/Pods-RxTimerWithBackgroundRecovery/Pods-RxTimerWithBackgroundRecovery.debug.xcconfig"; sourceTree = "<group>"; };
+		F7347DD4275A193D004C67BF /* ios_button_new_feature.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ios_button_new_feature.JPG; sourceTree = "<group>"; };
+		F7347DD6275A1A21004C67BF /* UIButton+RxConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+RxConfiguration.swift"; sourceTree = "<group>"; };
+		F7347DD8275A4E63004C67BF /* SMSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSButton.swift; sourceTree = "<group>"; };
 		F7BE6A1426D543B9002339CE /* RxTimerWithBackgroundRecovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTimerWithBackgroundRecovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BE6A1726D543B9002339CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7BE6A1926D543B9002339CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +90,12 @@
 			children = (
 				F7BE6A1726D543B9002339CE /* AppDelegate.swift */,
 				F7BE6A1926D543B9002339CE /* SceneDelegate.swift */,
-				F7BE6A1B26D543B9002339CE /* ViewController.swift */,
 				F7BE6A2B26D54806002339CE /* ViewModel.swift */,
+				F7BE6A1B26D543B9002339CE /* ViewController.swift */,
+				F7347DD6275A1A21004C67BF /* UIButton+RxConfiguration.swift */,
+				F7347DD8275A4E63004C67BF /* SMSButton.swift */,
 				F7BE6A1D26D543B9002339CE /* Main.storyboard */,
+				F7347DD4275A193D004C67BF /* ios_button_new_feature.JPG */,
 				F7BE6A2026D543BA002339CE /* Assets.xcassets */,
 				F7BE6A2226D543BA002339CE /* LaunchScreen.storyboard */,
 				F7BE6A2526D543BA002339CE /* Info.plist */,
@@ -156,6 +165,7 @@
 				F7BE6A2426D543BA002339CE /* LaunchScreen.storyboard in Resources */,
 				F7BE6A2126D543BA002339CE /* Assets.xcassets in Resources */,
 				F7BE6A1F26D543B9002339CE /* Main.storyboard in Resources */,
+				F7347DD5275A193D004C67BF /* ios_button_new_feature.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +221,9 @@
 				F7BE6A1C26D543B9002339CE /* ViewController.swift in Sources */,
 				F7BE6A1826D543B9002339CE /* AppDelegate.swift in Sources */,
 				F7BE6A2C26D54806002339CE /* ViewModel.swift in Sources */,
+				F7347DD9275A4E63004C67BF /* SMSButton.swift in Sources */,
 				F7BE6A1A26D543B9002339CE /* SceneDelegate.swift in Sources */,
+				F7347DD7275A1A21004C67BF /* UIButton+RxConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KS5QTFAS57;
 				INFOPLIST_FILE = RxTimerWithBackgroundRecovery/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KS5QTFAS57;
 				INFOPLIST_FILE = RxTimerWithBackgroundRecovery/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
