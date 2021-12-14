@@ -37,10 +37,10 @@ class SMSButton: UIButton {
             config.background.strokeWidth = 2
             config.image = UIImage(named: "login_code")
             config.imagePlacement = .trailing
+            config.buttonSize = .mini
+            config.cornerStyle = .small
             
             configuration = config
-            //titleLabel?.font = UIFont.systemFont(ofSize: 10)
-            subtitleLabel?.font = UIFont.systemFont(ofSize: 8)
             subtitleLabel?.textColor = .orange
             subtitleLabel?.text = ""
         }
