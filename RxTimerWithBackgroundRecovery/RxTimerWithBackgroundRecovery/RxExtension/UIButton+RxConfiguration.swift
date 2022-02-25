@@ -26,6 +26,9 @@
 
 import RxSwift
 
+///
+///  简单的扩展, 更好的结合 RxSwift 来进行绑定
+///
 @available(iOS, introduced: 15.0, message: "extension for UIButton.Configuration")
 extension Reactive where Base: UIButton {
     

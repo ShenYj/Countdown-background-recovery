@@ -45,6 +45,9 @@ public enum MessageStyle {
 public class ViewModel: NSObject {
     
     /// 处理切后台
+    ///
+    /// 通过记录`进入后台`与`恢复前台`而计算出时间差, 更新定时器
+    ///
     var isCountdown: Bool = false
     var offsetSecond: Int = 0
     var inBackgroundDate: Date?

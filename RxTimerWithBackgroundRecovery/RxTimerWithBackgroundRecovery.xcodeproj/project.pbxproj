@@ -88,11 +88,10 @@
 		F7BE6A1626D543B9002339CE /* RxTimerWithBackgroundRecovery */ = {
 			isa = PBXGroup;
 			children = (
+				F7DB170427C897A600C5B1E0 /* MVVM */,
+				F7DB170527C898B500C5B1E0 /* RxExtension */,
 				F7BE6A1726D543B9002339CE /* AppDelegate.swift */,
 				F7BE6A1926D543B9002339CE /* SceneDelegate.swift */,
-				F7BE6A2B26D54806002339CE /* ViewModel.swift */,
-				F7BE6A1B26D543B9002339CE /* ViewController.swift */,
-				F7347DD6275A1A21004C67BF /* UIButton+RxConfiguration.swift */,
 				F7347DD8275A4E63004C67BF /* SMSButton.swift */,
 				F7BE6A1D26D543B9002339CE /* Main.storyboard */,
 				F7347DD4275A193D004C67BF /* ios_button_new_feature.JPG */,
@@ -101,6 +100,23 @@
 				F7BE6A2526D543BA002339CE /* Info.plist */,
 			);
 			path = RxTimerWithBackgroundRecovery;
+			sourceTree = "<group>";
+		};
+		F7DB170427C897A600C5B1E0 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F7BE6A2B26D54806002339CE /* ViewModel.swift */,
+				F7BE6A1B26D543B9002339CE /* ViewController.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		F7DB170527C898B500C5B1E0 /* RxExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F7347DD6275A1A21004C67BF /* UIButton+RxConfiguration.swift */,
+			);
+			path = RxExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

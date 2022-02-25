@@ -12,6 +12,22 @@
 - [x] `CleanArchitectureRxSwift`架构
 - [x] `UIButton`的新特性(`iOS 15.0`)
 
+## 关于代码
+
+- 重点
+
+  ```zsh
+  RxTimerWithBackgroundRecovery
+  ├── MVVM
+  │   ├── ViewController.swift
+  │   └── ViewModel.swift
+  └── RxExtension
+      └── UIButton+RxConfiguration.swift
+  ```
+  
+  - `MVVM`: 此目录下用于演示 `CleanArchitectureRxSwift` 架构下代码分层效果
+  - `RxExtension`: 以一个简单的示范，演示今后项目中如何自定义 `Binder`，来简化 `View` 层中的绑定代码
+
 ## 按钮的交互、倒计时等效果展示
 
 |   版本     |   normal  | countdown |
