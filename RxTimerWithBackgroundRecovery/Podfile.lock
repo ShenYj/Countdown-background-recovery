@@ -19,9 +19,9 @@ PODS:
   - RxBinding (0.5):
     - RxCocoa (~> 6)
     - RxSwift (~> 6)
-  - RxCocoa (6.2.0):
-    - RxRelay (= 6.2.0)
-    - RxSwift (= 6.2.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
   - RxDataSources (5.0.0):
     - Differentiator (~> 5.0)
     - RxCocoa (~> 6.0)
@@ -38,9 +38,9 @@ PODS:
   - RxOptional (5.0.2):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
-  - RxRelay (6.2.0):
-    - RxSwift (= 6.2.0)
-  - RxSwift (6.2.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - RxSwiftExt (6.0.1):
     - RxSwiftExt/Core (= 6.0.1)
     - RxSwiftExt/RxCocoa (= 6.0.1)
@@ -92,13 +92,13 @@ DEPENDENCIES:
   - RxAnimated (from `https://github.com/RxSwiftCommunity/RxAnimated.git`, tag `0.9.0`)
   - RxAppState
   - RxBinding (from `https://github.com/RxSwiftCommunity/RxBinding.git`, tag `0.5`)
-  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, tag `6.2.0`)
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, tag `6.5.0`)
   - RxDataSources (from `https://github.com/RxSwiftCommunity/RxDataSources.git`, tag `5.0.0`)
   - RxFlow (from `https://github.com/RxSwiftCommunity/RxFlow.git`, tag `2.12.2`)
   - RxGesture (from `https://github.com/RxSwiftCommunity/RxGesture.git`, tag `4.0.2`)
   - RxKeyboard (from `https://github.com/RxSwiftCommunity/RxKeyboard`, tag `2.0.0`)
   - RxOptional (from `https://github.com/RxSwiftCommunity/RxOptional.git`, tag `v5.0.3`)
-  - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`, tag `6.2.0`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`, tag `6.5.0`)
   - RxSwiftExt (from `https://github.com/RxSwiftCommunity/RxSwiftExt.git`, tag `6.0.1`)
   - RxUIAlert (from `https://github.com/RxSwiftCommunity/RxAlert.git`, tag `1.4.1`)
   - RxViewController (from `https://github.com/devxoul/RxViewController.git`, tag `2.0.0`)
@@ -135,7 +135,7 @@ EXTERNAL SOURCES:
     :tag: '0.5'
   RxCocoa:
     :git: https://github.com/ReactiveX/RxSwift.git
-    :tag: 6.2.0
+    :tag: 6.5.0
   RxDataSources:
     :git: https://github.com/RxSwiftCommunity/RxDataSources.git
     :tag: 5.0.0
@@ -153,7 +153,7 @@ EXTERNAL SOURCES:
     :tag: v5.0.3
   RxSwift:
     :git: https://github.com/ReactiveX/RxSwift.git
-    :tag: 6.2.0
+    :tag: 6.5.0
   RxSwiftExt:
     :git: https://github.com/RxSwiftCommunity/RxSwiftExt.git
     :tag: 6.0.1
@@ -179,7 +179,7 @@ CHECKOUT OPTIONS:
     :tag: '0.5'
   RxCocoa:
     :git: https://github.com/ReactiveX/RxSwift.git
-    :tag: 6.2.0
+    :tag: 6.5.0
   RxDataSources:
     :git: https://github.com/RxSwiftCommunity/RxDataSources.git
     :tag: 5.0.0
@@ -197,7 +197,7 @@ CHECKOUT OPTIONS:
     :tag: v5.0.3
   RxSwift:
     :git: https://github.com/ReactiveX/RxSwift.git
-    :tag: 6.2.0
+    :tag: 6.5.0
   RxSwiftExt:
     :git: https://github.com/RxSwiftCommunity/RxSwiftExt.git
     :tag: 6.0.1
@@ -216,14 +216,14 @@ SPEC CHECKSUMS:
   RxAnimated: e53fb66cafc0539faf881b734f7412a624527f0a
   RxAppState: 9c34f951d4ff8b9034f84016fe766202365bceb2
   RxBinding: e3c76d02d0ee3f1a306a0fb8e8ef6f2eda65a375
-  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxFlow: fa434215aca391d10d4d5048c0a035c9502b3666
   RxGesture: f059f2aeef966fb17dad56ee440e76410f10e55f
   RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
   RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
-  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
-  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   RxUIAlert: fa9ca44ddd114791a394a14443e40c26127dc049
   RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
@@ -233,6 +233,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: dadd4921314c65f9034e0a784492c1cfcfdba513
+PODFILE CHECKSUM: 43f60f3e1d1763c5a007060de7f8d379b8e93bc3
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

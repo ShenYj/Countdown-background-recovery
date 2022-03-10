@@ -8,8 +8,8 @@ install! 'cocoapods',
 
 def libs_rx_swift
   # Core & Derived library
-  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git', :tag => '6.2.0'
-  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :tag => '6.2.0'
+  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git', :tag => '6.5.0'
+  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :tag => '6.5.0'
   pod 'RxGesture', :git => 'https://github.com/RxSwiftCommunity/RxGesture.git', :tag => '4.0.2'
   pod 'RxSwiftExt', :git => 'https://github.com/RxSwiftCommunity/RxSwiftExt.git', :tag => '6.0.1'
   pod 'RxDataSources', :git => 'https://github.com/RxSwiftCommunity/RxDataSources.git', :tag => '5.0.0'
