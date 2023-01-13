@@ -106,12 +106,7 @@ extension ViewController {
         smsButton.snp.makeConstraints {
             $0.top.equalTo(messageLabel.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
-            
-            /// TODO: waiting for swift 5.6 new attributes: #unavailable(iOS 15.0)
-            if #available(iOS 15.0, *) {
-                
-            }
-            else {
+            if #unavailable(iOS 15.0) {
                 $0.size.equalTo(CGSize(width: 120, height: 44))
             }
         }
